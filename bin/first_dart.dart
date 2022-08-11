@@ -53,21 +53,59 @@ void main() {
   //   stdout.write('\n');
   // }
 
-  String username;
-  bool notValid = false;
+  // Looping with do while
+  // String username;
+  // bool notValid = false;
 
-  do {
-    stdout.write('Masukkan nama Anda (min. 6 karakter): ');
-    username = stdin.readLineSync() ?? "";
+  // do {
+  //   stdout.write('Masukkan nama Anda (min. 6 karakter): ');
+  //   username = stdin.readLineSync() ?? "";
 
-    if (username.length < 6) {
-      notValid = true;
-      print('Username Anda tidak valid');
-    } else {
-      print('Username anda sudah benar');
-      notValid = false;
-    }
-  } while (notValid);
+  //   if (username.length < 6) {
+  //     notValid = true;
+  //     print('Username Anda tidak valid');
+  //   } else {
+  //     print('Username anda sudah benar');
+  //     notValid = false;
+  //   }
+  // } while (notValid);
+
+  // OOP
+  var riko = Human('Riko', 25, 10);
+  var mega = Human('Mega', 25, 10);
+  riko.eat();
+  mega.activity();
+  riko.sleep();
+  mega.eat();
+  mega.sleep();
+  stdout.write('Energi Riko : ');
+  print(riko.energy);
+  stdout.write('Energi Mega : ');
+  print(mega.energy);
+}
+
+// OOP
+class Human {
+  String name;
+  int age;
+  double energy;
+
+  Human(this.name, this.age, this.energy);
+
+  void eat() {
+    print('$name is eating.');
+    energy += 2;
+  }
+
+  void activity() {
+    print('$name is activity.');
+    energy -= 4;
+  }
+
+  void sleep() {
+    print('$name is sleep.');
+    energy += 3;
+  }
 }
 
 // double fnFarenheit(num suhu) {

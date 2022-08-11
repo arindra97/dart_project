@@ -1,6 +1,7 @@
 import 'package:first_dart/first_dart.dart' as first_dart;
 // import library for input value from console
 import 'dart:io';
+import 'Human.dart';
 
 void main() {
   // // declare variable name with assignment operator
@@ -82,30 +83,6 @@ void main() {
   print(riko.energy);
   stdout.write('Energi Mega : ');
   print(mega.energy);
-}
-
-// OOP
-class Human {
-  String name;
-  int age;
-  double energy;
-
-  Human(this.name, this.age, this.energy);
-
-  void eat() {
-    print('$name is eating.');
-    energy += 2;
-  }
-
-  void activity() {
-    print('$name is activity.');
-    energy -= 4;
-  }
-
-  void sleep() {
-    print('$name is sleep.');
-    energy += 3;
-  }
 }
 
 // double fnFarenheit(num suhu) {
